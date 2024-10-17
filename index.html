@@ -3,14 +3,31 @@
 
 <head>
     <title>Wallet Integration</title>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.0/dist/ethers.umd.min.js"></script>
+    <script type="module" src="index.js"></script> <!-- Include your JavaScript file -->
 </head>
 
 <body>
     <h1>Connect Wallet</h1>
     <button id="connectButton">Connect to Wallet</button>
 
-    <script>
+    <div>
+        <input type="number" id="numberInput" placeholder="Enter a number" />
+        <button id="setNumberButton">Set Number</button>
+    </div>
 
+    <div>
+        <input type="number" id="numberInput" placeholder="Enter a number" />
+        <button id="incrementButton">Increment</button>
+    </div>
+
+    <div>
+        <input type="number" id="numberInput" placeholder="Enter a number" />
+        <button id="readNumberButton">Current Number</button>
+    </div>
+
+    <script>
+        // You can add any inline script here if needed, but the main functionality is in index.js
     </script>
 </body>
 

@@ -1,2 +1,34 @@
+# Foundry generated files
+.artifacts/
+out/
+cache/
+foundry-*.json
+
+# Ignores development broadcast logs
+!/broadcast
+/broadcast/*/31337/
+/broadcast/**/dry-run/
+broadcast/
+lib/
+
 .article.md
 nextjs-full-stack-web3
+
+# Docs
+docs/
+
+# Dotenv file
+.env
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Yarn users
+node_modules/
+dist/
+build/
+coverage/
+*.log

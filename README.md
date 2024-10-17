@@ -1,66 +1,41 @@
-## Foundry
+## This Repo covers:
+1. HTML / JS
+   1. To spin up website either use liver server extension or using yarn call - "yarn http-server"
+2. NextJS / React and "raw" ethers
+3. NextJS & "webs3-react"
+4. NextJS & "react-moralis"
+5. NextJS & "web3Modal"
+6. NextJS & "useDapp"
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+# run forge and anvil to spin up sample contract
 
-Foundry consists of:
+forge init --force
+anvil
+forge test
+forge build
+forge create src/Counter.sol:Counter --private-key (Private-Key)
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+Find contract abi in out folder under contract name (Foundry)
 
-## Documentation
+# addition of buttons
+since i used the counter.sol contract from foundry, I added setNumber, increment, and getNumber buttons
 
-https://book.getfoundry.sh/
+# couldn't get import { ethers } to work so used cdn.delivr instead in the html file
 
-## Usage
+think this has something to do with 
 
-### Build
+const provider = new ethers.providers.Web3Provider(window.ethereum);
 
-```shell
-$ forge build
-```
+vs.
 
-### Test
+const provider = new ethers.BrowswerProvider(window.ethereum);
 
-```shell
-$ forge test
-```
+# also installed browserify using yarn
 
-### Format
+yarn add browserify - this adds it to the project directory in the package.json file
 
-```shell
-$ forge fmt
-```
+yarn browserify index.js --standalone bundle -o ./dist/bundle.js (ParseError: 'import' and 'export' may appear only with 'sourceType: module')
 
-### Gas Snapshots
+would need to change things in html to reflect where the code sits
 
-```shell
-$ forge snapshot
-```
 
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
