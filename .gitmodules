@@ -16,3 +16,6 @@
 [submodule "nextjs-web3modal-metamask-connect"]
 	path = nextjs-web3modal-metamask-connect
 	url = https://github.com/PatrickAlphaC/nextjs-web3modal-metamask-connect
+[submodule "lib/forge-std"]
+	path = lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
